@@ -1,0 +1,23 @@
+<div style="padding: 20px; height: calc(100% - 150px); overflow-y: auto;">
+  <div nz-row>
+    <div nz-col nzSpan="12" nzOffset="5">
+      <nz-steps [nzCurrent]="currentStepIndex" nzProgressDot>
+        <nz-step></nz-step>
+        <nz-step></nz-step>
+        <nz-step></nz-step>
+        <nz-step></nz-step>
+      </nz-steps>
+    </div>
+  </div>
+
+  <div nz-row nzJustify="center">
+    <div nz-col nzXs="18" nzSm="18" nzMd="18" nzLg="12" nzXl="16" nzXXl="12">
+      <div [ngSwitch]="currentStepIndex">
+        <div *ngSwitchCase="0">Test Page 1</div>
+        <div *ngSwitchCase="1">Test Page 2</div>
+        <div *ngSwitchCase="2">Test Page 3</div>
+        <div *ngSwitchCase="3">Test Page 4</div>
+      </div>
+    </div>
+  </div>
+</div>
